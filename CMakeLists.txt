@@ -3,7 +3,7 @@ project(multiplayer_donkey_kong)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(multiplayer_donkey_kong main.cpp)
+add_executable(multiplayer_donkey_kong main.cpp src/game/Game.cpp src/game/Game.hpp src/util/Utility.hpp src/util/Errors.hpp)
 include_directories(usr/include c:/SDK/SFML-2.5.1/include/SFML)
 
 # Configure SFML
