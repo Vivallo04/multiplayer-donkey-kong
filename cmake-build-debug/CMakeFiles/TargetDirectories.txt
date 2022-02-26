@@ -1,3 +1,0 @@
-D:/Development/CLionProjects/multiplayer-donkey-kong/cmake-build-debug/CMakeFiles/multiplayer_donkey_kong.dir
-D:/Development/CLionProjects/multiplayer-donkey-kong/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Development/CLionProjects/multiplayer-donkey-kong/cmake-build-debug/CMakeFiles/rebuild_cache.dir
