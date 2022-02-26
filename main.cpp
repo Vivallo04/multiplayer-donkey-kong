@@ -5,7 +5,8 @@
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
-    Game *game = new Game;
+    Game* game = new Game;
     game -> Run();
-    return 0;
+
+    return EXIT_SUCCESS;
 }

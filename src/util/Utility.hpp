@@ -7,16 +7,18 @@
 
 #include "string"
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include "Errors.hpp"
 
-void getImageAsset(std::string imagePath)
+sf::Texture getImageAsset(std::string imagePath)
 {
-    sf::Image image;
-    image.loadFromFile("donkey-icon.png");
-    if (!image.loadFromFile("donkey-icon.png"))
+    sf::Texture texture;
+    if (!texture.loadFromFile("donkey-icon.png"))
     {
-        throw 1;
+        std::cout << "Unable to load file: " + imagePath << std::endl;
+        throw std::invalid_argument("Unable to load: " + imagePath);
     }
+    return texture;
 }
 
 void getTextureAsset(std::string texturePath)

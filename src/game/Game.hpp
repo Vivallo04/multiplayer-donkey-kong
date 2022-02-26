@@ -4,6 +4,7 @@
 
 #ifndef MULTIPLAYER_DONKEY_KONG_GAME_HPP
 #define MULTIPLAYER_DONKEY_KONG_GAME_HPP
+#include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -11,8 +12,12 @@ class Game
 {
 private:
     sf::Image* icon{};
+
+
 public:
-    sf::Window window;
+    sf::Text text;
+    sf::Font font;
+    sf::RenderWindow window;
     Game();
     void Run();
 };
