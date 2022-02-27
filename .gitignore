@@ -33,6 +33,11 @@
 
 # CMake
 cmake-build-debug
+cmake_modules
 
 # IDE
 .idea
+
+# Socket.io
+socket.io-client-cpp
+src/server/node_modules

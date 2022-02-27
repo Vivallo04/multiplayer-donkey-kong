@@ -29,7 +29,7 @@ void Game::Run()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        window.clear(sf::Color::Red);
+        window.clear(sf::Color::Black);
         window.draw( text);
         window.display();
     }

@@ -1,10 +1,17 @@
 cmake_minimum_required(VERSION 3.21)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
+        CACHE STRING "Vcpkg toolchain file")
 project(multiplayer_donkey_kong)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(multiplayer_donkey_kong main.cpp src/game/Game.cpp src/game/Game.hpp src/util/Utility.hpp src/util/Errors.hpp)
+add_executable(multiplayer_donkey_kong main.cpp src/game/Game.cpp src/game/Game.hpp src/util/Utility.hpp src/util/Errors.hpp src/server/Server.cpp src/server/Server.hpp)
 include_directories(assets usr/include c:/SDK/SFML-2.5.1/include/SFML)
+
+
+# Configure Socket.io
+add_compile_definitions(BOOST_DATE_TIME_NO_LIB, BOOST_REGEX_NO_LIB, ASIO_STANDALONE,
+        _WEBSOCKETPP_CPP11_STL_, _WEBSOCKETPP_CPP11_FUNCTIONAL_)
 
 # Configure SFML
 set(SFML_ROOT c:/SDK/SFML-2.5.1)

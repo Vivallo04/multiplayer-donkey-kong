@@ -12,12 +12,11 @@ class Game
 {
 private:
     sf::Image* icon{};
-
-
-public:
     sf::Text text;
     sf::Font font;
     sf::RenderWindow window;
+
+public:
     Game();
     void Run();
 };
